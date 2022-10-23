@@ -250,3 +250,15 @@ section {
 .section p {
     font-size: 16px;
 }
+
+/** Información Adicional **/
+.aditional-info {
+    background-color: var(--tool-background);
+    border-radius: 20px;
+    color: var(--color);
+}
+
+.social-media a {
+    display: inline-block;
+    width: 20px;
+}
