@@ -1,7 +1,5 @@
-* {
-    box-sizing: border-box !important;
-}
-
+/******************* *******************/
+/* Variación del Tema */
 [data-theme="light"] {
     --general-background: url('../images/background-light.png');
     --background: #F1F3F4;
@@ -26,7 +24,167 @@
     --primary: blue;
 }
 
+/******************* *******************/
+/* Código General */
+* {
+    box-sizing: border-box !important;
+    transition: 0.25s;
+}
+
+body {
+    background: var(--general-background);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/******************* *******************/
+/* Barra Lateral */
+.izq-bar {
+    background: var(--nav-background);
+    height: calc(100vh - 40px);
+    max-height: 550px;
+    overflow-x: hidden;
+    margin: 20px 10px 20px 20px;
+    width: calc(100% - 30px);
+    max-width: 350px;
+    position: sticky;
+    top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    opacity: 0.75;
+    transition: 0.25s;
+    float: right;
+    z-index: 2;
+}
+
+.izq-bar:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    transition: 0.25s;
+}
+
+/** Logo - Submenú de la Barra Lateral**/
+.izq-bar-logo {
+    height: 15%;
+    min-height: 75px;
+    margin: 0 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.izq-bar-logo img {
+    width: 100%;
+}
+
+/** Navegación General - Submenú de la Barra Lateral**/
+.izq-bar-nav {height: 50%; min-height: 250px;}
+.izq-bar-nav ul { font-size: 0; padding: 0;}
+.izq-bar-nav a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+.izq-bar-nav li {
+    font-size: 16px;
+    padding: 12.5px 20px;
+    margin: 0 20px;
+    color: var(--nav-link-color);
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+}
+.izq-bar-nav li:hover {
+    background: var(--nav-link-background);
+    transition: 0.25s;
+    
+}
+
+/** Anuncio - Submenú de la Barra Lateral**/
+.izq-bar-pub {
+    height: 20%;
+    min-height: 100px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+}
+
+/** Footer - Submenú de la Barra Lateral**/
+.izq-bar-foo {
+    height: 15%;
+    min-height: 75px;
+    font-size: 12px;
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--color);
+}
+.izq-bar-foo a { color: var(--color);}
+.izq-bar-foo a:hover {background-color: rgba(255, 255, 255, 0.25); border-radius: 2px;}
+
+
+/******************* *******************/
+/** Barra de Herramientas () __ () **/
+.util-bar {
+    margin: 20px 20px 20px 10px;
+    padding: 0;
+    width: calc(100% - 30px);
+    height: 50px;
+}
+
+/** Búsqueda - Barra de Herramientas **/
+.util-bar form {
+    width: 100%;
+    max-width: 900px;
+    border: 5px solid var(--border-color);
+    background: var(--tool-background);
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.util-bar input[type=text] {
+    width: 70%;
+    padding: 0 20px;
+    max-width: 630px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: var(--color);
+    font-size: 16px;
+}
+
+.util-bar input[type=text]::placeholder {
+    color: var(--color);
+    font-size: 16px;
+}
+
+.util-bar button, .util-bar a {
+    width: 10%;
+    max-width: 90px;
+    height: 40px;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.util-bar button:hover, .util-bar a:hover {
+    text-shadow: 2px 2px gray;
+}
+
 /* Estilos del switch */
+.util-bar input[type=check] {
+    width: 10%;
+    max-width: 90px;
+    height: 40px;
+    font-size: 16px;
+}
 
 .switch {
     position: relative;
@@ -77,165 +235,20 @@ input:checked + .slider:before {
     transform: translateX(20px);
 }
 
-body {
-    background: var(--general-background);
-    background-attachment: fixed;
-}
-
-.izq-bar {
-    background: var(--nav-background);
-    height: calc(100vh - 40px);
-    max-height: 750px;
-    overflow-x: hidden;
-    margin: 20px 10px 20px 20px;
-    width: calc(100% - 30px);
-    max-width: 350px;
-    position: sticky;
-    top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    opacity: 0.75;
-    transition: 0.25s;
-    float: right;
-    z-index: 2;
-}
-.izq-bar:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    opacity: 1;
-    transition: 0.25s;
-}
-  
-
-/** Logo - Submenú de la Barra Lateral**/
-.izq-bar-logo {
-    height: 15%;
-    min-height: 75px;
-    margin: 0 20px;
-    padding: 20px;
-    width: calc(100% - 40px);
-}
-
-.izq-bar-logo img {
-    width: 100%;
-}
-
-/** Navegación General - Submenú de la Barra Lateral**/
-.izq-bar-nav {height: 50%; min-height: 250px;}
-.izq-bar-nav ul { font-size: 0; padding: 0;}
-.izq-bar-nav a {
-    color: black;
-    text-decoration: none;
-    list-style: none;
-}
-.izq-bar-nav li {
-    font-size: 16px;
-    padding: 12.5px 20px;
-    margin: 0 20px;
-    color: var(--nav-link-color);
-    display: inline-block;
-    text-align: center;
-    width: calc(100% - 40px);
-    border-radius: 10px;
-}
-.izq-bar-nav li:hover {
-    background: var(--nav-link-background);
-    transition: 0.25s;
-    
-}
-/** Anuncio - Submenú de la Barra Lateral**/
-.izq-bar-pub {
-    height: 20%;
-    min-height: 100px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 20px;
-    width: calc(100% - 40px);
-}
-
-/** Footer - Submenú de la Barra Lateral**/
-.izq-bar-foo {
-    height: 15%;
-    min-height: 75px;
-    font-size: 12px;
-    padding: 10px 20px;
-    text-align: center;
-    color: var(--color);
-}
-.izq-bar-foo a { color: var(--color);}
-.izq-bar-foo a:hover {background-color: rgba(255, 255, 255, 0.25); border-radius: 2px;}
-
-
-
-/** Barra de Herramientas () __ () **/
-
-.util-bar {
-    margin: 20px 20px 20px 10px;
-    padding: 0;
-    width: calc(100% - 30px);
-    height: 50px;
-
-}
-
-/** Búsqueda - Barra de Herramientas **/
-.util-bar form {
-    width: 100%;
-    max-width: 800px;
-    border: 5px solid var(--border-color);
-    background: var(--tool-background);
-    border-radius: 15px;
-    overflow: hidden;
-    font-size: 0;
-}
-
-.util-bar input[type=text] {
-    width: 70%;
-    padding: 0 20px;
-    max-width: 560px;
-    height: 40px;
-    border: none;
-    background: none;
-    color: var(--color);
-    font-size: 16px;
-}
-
-.util-bar input[type=text]::placeholder {
-    color: var(--color);
-    font-size: 16px;
-}
-
-.util-bar button, .util-bar a {
-    width: 10%;
-    max-width: 80px;
-    height: 40px;
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    color: var(--color);
-    font-size: 20px;
-    text-align: center;
-    display: inline-block;
-}
-
-.util-bar input[type=check] {
-    width: 10%;
-    max-width: 80px;
-    height: 40px;
-    font-size: 16px;
-}
-
 .feedback { 
     color: var(--color);
     display: inline-block;
     width: 10%;
-    max-width: 80px;
+    max-width: 90px;
 }
 
+/******************* *******************/
 /** Sección General de Contenido**/
 section {
     color: var(--color);
     margin: 20px 20px 20px 10px;
+    padding: 20px;
+    max-width: 900px;
     z-index: 0;
 }
 
@@ -251,14 +264,131 @@ section {
     font-size: 16px;
 }
 
+/******************* *******************/
 /** Información Adicional **/
 .aditional-info {
     background-color: var(--tool-background);
     border-radius: 20px;
     color: var(--color);
+    max-width: 900px;
+    font-size: 0;
+    margin: 20px;
 }
 
 .social-media a {
     display: inline-block;
-    width: 20px;
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    max-width: 50px;
+    font-size: 16px;
+    color: var(--color);
+}
+
+.social-media a:hover {
+    background: var(--background);
+    border-radius: 10px;
+}
+
+.view-phone { display: none; }
+/******************* *******************/
+/** Responsive Mobile **/
+@media (max-width: 767px) {
+
+    /******************* *******************/
+    /* Barra Lateral */
+    .izq-bar {
+        height: 100px;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        border-radius: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        opacity: 1;
+        float: left;
+        z-index: 2;
+        top: 0;
+        overflow-y: hidden;
+    }
+
+    .izq-bar:hover {
+        height: 80vh;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+    
+    /** Logo - Submenú de la Barra Lateral**/
+    .izq-bar-logo {
+        height: 100px;
+        min-height: 1px;
+        margin: 0 20px;
+        padding: 20px;
+        width: 40%;
+        display: inline-block;
+    }
+    
+    .izq-bar-logo img {
+        width: 100%;
+    }
+
+    .izq-bar-nav {height: 10%; min-height: 100px;}
+
+    .izq-bar-nav li {
+        font-size: 16px;
+        padding: 12.5px 20px;
+        margin: 0 10px;
+        color: var(--nav-link-color);
+        display: inline-block;
+        text-align: center;
+        width: calc(20% - 20px);
+        border-radius: 10px;
+    }
+    
+    /******************* *******************/
+    /** Barra de Herramientas () __ () **/
+    .util-bar {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    /** Búsqueda - Barra de Herramientas **/
+    .util-bar form {
+        border-radius: 0;
+    }
+
+
+    /******************* *******************/
+    /** Información Adicional **/
+    .aditional-info {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .social-media a {
+        padding: 5px;
+        max-width: 30px;
+    }
+
+    .view-phone { display: inline-block; width: 50%; height: 20vh; text-align: right; color: var(--nav-link-color);}
+
+    .mobile-nav:hover .phone-nav-1 {
+        display: none;
+    }
+
+    .mobile-nav:hover .phone-nav-2 {
+        display: inline-block;
+    }
+
+    .mobile-nav .phone-nav-2 {
+        display: none;
+    }
+
+    .mobile-nav .phone-nav-1 {
+        display: inline-block;
+    }
 }
