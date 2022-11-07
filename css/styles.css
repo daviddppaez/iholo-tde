@@ -27,11 +27,11 @@
 }
 
 /* Blogger Original CSS Data */
-    /* Fecha */ .date-outer { font-size: 12px !important; font-style: italic; float: right; }
+    /* Fecha */ .date-outer h2 { font-size: 12px !important; font-style: italic; float: right; }
     /* Título */ .post-title, .entry-title { font-size: 24px; font-weight: 800;}
-    /* Botones */ .blog-pager a { display: inline-block; padding: 20px; border-radius: 10px;}
-    /* Botones Hover */ .blog-pager a { background: var(--nav-link-background); transition: 0.25s;}
-    /* Footer del Post */ .post-footer { padding: 20px; border-radius: 10px; background-color: var(--nav-background); color: var(--color); font-size: 12px;}
+    /* Botones */ .home-link { display: inline-block; padding: 20px; border-radius: 10px;}
+    /* Botones Hover */ .home-link { background: var(--nav-link-background); transition: 0.25s;}
+    /* Footer del Post */ .post-footer { margin: 10px 0; padding: 20px; border-radius: 10px; background-color: var(--nav-background); color: var(--color); font-size: 12px;}
     /* Footer del Post - Enlace */ .post-footer a { color: var(--color);}
 
 /* Estilos del switch */
