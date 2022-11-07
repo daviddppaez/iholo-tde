@@ -27,12 +27,13 @@
 }
 
 /* Blogger Original CSS Data */
-    /* Fecha */ .date-outer h2 { font-size: 12px !important; font-style: italic; float: right; }
+    /* Fecha */ .date-header { font-size: 12px !important; font-style: italic; float: right; }
     /* Título */ .post-title, .entry-title { font-size: 24px; font-weight: 600;}
     /* Botones */ .home-link, .blog-pager-older-link, .blog-pager-newer-link { display: inline-block; background: var(--nav-background); padding: 5px 20px; border-radius: 10px; color: var(--color);}
-    /* Botones Hover */ .home-link, .blog-pager-older-link, .blog-pager-newer-link { background: var(--nav-link-background); transition: 0.25s;}
+    /* Botones Hover */ .home-link, .blog-pager-older-link, .blog-pager-newer-link { background: var(--nav-link-background); transition: 0.25s; color: var(--color); background-color: rgba(255, 255, 255, 0.25); border-radius: 2px;}
     /* Footer del Post */ .post-footer { margin: 10px 0; padding: 20px; border-radius: 10px; background-color: var(--nav-background); color: var(--color); font-size: 12px;}
-    /* Footer del Post - Enlace */ .post-footer a { color: var(--color); background-color: rgba(255, 255, 255, 0.25); border-radius: 2px;}
+    /* Footer del Post - Enlace */ .post-footer a { color: var(--color);}
+    /* Footer del Post - Enlace Hover */ .post-footer a { color: var(--color); background-color: rgba(255, 255, 255, 0.25); border-radius: 2px;}
 
 /* Estilos del switch */
 
